@@ -2,12 +2,12 @@
 <footer class="footer">
     <div class="container">
         <div class="row pb-4">
-            <div class="col-xl-5 col-lg-5 col-md-12">
+            <div class="col-xl-5 col-lg-4 col-md-12">
                 <div class="footer-logo">
                     <a href="#"><img src="assets/images/logo.png"></a>
-                    <p>Get quality academic writing support tailored to your needs. From assignment writing to research
-                        papers, our experts deliver unique, on-time solutions to help you succeed. Contact us for
-                        reliable assistance with your assignments.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sit ut aliquam. Rerum minima
+                        deleniti consequuntur. Mollitia quidem, laudantium error fugiat totam voluptatum deserunt
+                        similique illo officiis aperiam doloremque nihil?.</p>
                     <div class="social">
                         <p class="mb-0">
                             <a target="_blank" aria-label="Facebook" href="#"><i
@@ -22,25 +22,26 @@
                 <div class="footer-links ">
                     <h6>Our Service</h6>
                     <ul class="list-unstyled">
-                        <li><a href="assignment">Assignment</a></li>
-                        <li><a href="dissertation">Dissertation</a></li>
-                        <li><a href="research-paper">Research Paper</a></li>
-                        <li><a href="thesis">Thesis</a></li>
-                        <li><a href="online-exam">Online Exam</a></li>
+                        <li><a href="app-development">Application Development</a></li>
+                        <li><a href="animation-services">Animation Services</a></li>
+                        <li><a href="web-development">Web Development</a></li>
+                        <li><a href="concept-art">Concept Art</a></li>
+                        <li><a href="graphic-design">Graphic Design</a></li>
+                        <li><a href="digital-marketing">Digital Marketing</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-xl-2 col-lg-2 col-md-6 col-6">
+            <div class="col-xl-2 col-lg-3 col-md-6 col-6">
                 <div class="footer-links ">
                     <h6>Contact Us</h6>
                     <ul class="list-unstyled">
                         <li><a class="d-flex align-items-center justify-content-lg-start justify-content-center"
-                                href="tel:+1234567890"><img src="assets/images/phone.png" alt=""> +1234567890</a></li>
+                                href="tel:+1234567890"><img src="assets/images/phone.webp" alt=""> +1234567890</a></li>
                         <li><a class="d-flex align-items-center justify-content-lg-start justify-content-center"
-                                href="mailto:info@example.com"><img src="assets/images/email.png" alt="">
+                                href="mailto:info@example.com"><img src="assets/images/email.webp" alt="">
                                 info@example.com</a></li>
                         <li><a class="d-flex align-items-center justify-content-lg-start justify-content-center"
-                                href="#"><img src="assets/images/location.png" alt=""> 2231 Johnstown Road Bensenville,
+                                href="#"><img src="assets/images/location.webp" alt=""> 2231 Johnstown Road Bensenville,
                                 IL 60106</a></li>
                     </ul>
                 </div>
@@ -69,10 +70,10 @@
                 </div>
             </div>
             <div class="col-xl-6 col-lg-5 col-md-12">
-                <div class="social-link text-end">
+                <div class="social-link text-lg-end">
                     <p class="mb-0">
-                        <a href="terms-conditions">Terms &amp; Conditions</a>
-                        <a href="privacy-policy">Privacy Policy</a>
+                        <a href="#">Terms &amp; Conditions</a>
+                        <a href="#">Privacy Policy</a>
                     </p>
                 </div>
             </div>
@@ -87,6 +88,14 @@
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <!-- Slick Carousel JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<!-- gsap -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<script>
+
+</script>
+<!-- <script src="https://unpkg.com/split-type"></script> -->
 <!-- Custom JS -->
 <script src="assets/js/main.js"></script>
 <!-- AOS JS -->
@@ -106,46 +115,44 @@ AOS.init({
     <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-                <a class="nav-link active" href="https://oxfordassignment.com/">Home</a>
+                <a class="nav-link <?php if ($page == 'index') { echo 'active'; } ?>" href="index">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="assignment">Assignment</a>
+                <a class="nav-link <?php if ($page == 'about-us') { echo 'active'; } ?>" href="about-us">About
+                    Us</a>
             </li>
-            <!-- <li class="nav-item dropdown">
-                <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+            <li class="nav-item dropdown navdesktop">
+                <a class="nav-link <?php if ($page == '#') { echo 'active'; } ?>" href="#">
                     Services <i class="fa fa-angle-down"></i>
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Service 1</a></li>
-                    <li><a class="dropdown-item" href="#">Service 2</a></li>
-                    <li><a class="dropdown-item" href="#">Service 3</a></li>
-                    <li><a class="dropdown-item" href="#">Service 4</a></li>
+                <ul class="dropdown-menu dropdown-navdesktop" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="app-development">Application Development</a></li>
+                    <li><a class="dropdown-item" href="animation-services">Animation Services</a></li>
+                    <li><a class="dropdown-item" href="web-development">Web Development</a></li>
+                    <li><a class="dropdown-item" href="concept-art">Concept Art</a></li>
+                    <li><a class="dropdown-item" href="graphic-design">Graphic Design</a></li>
+                    <li><a class="dropdown-item" href="digital-marketing">Digital Marketing</a></li>
                 </ul>
-            </li> -->
+            </li>
             <li class="nav-item">
-                <a class="nav-link " href="dissertation">
-                    Dissertation
+                <a class="nav-link <?php if ($page == 'blog') { echo 'active'; } ?>" href="blog">
+                    Blog
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="research-paper">
-                    Research Paper
+                <a class="nav-link <?php if ($page == 'portfolio') { echo 'active'; } ?>" href="portfolio">
+                    Portfolio
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="thesis">
-                    Thesis
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="online-exam">
-                    Online Exam
+                <a class="nav-link <?php if ($page == 'contact-us') { echo 'active'; } ?>" href="contact-us">
+                    Contact Us
                 </a>
             </li>
         </ul>
         <div class="mt-3">
-            <a href="#" class="btn btn-theme-yellow">Live Chat</a>
+            <a href="#" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal"
+                class="btn btn-theme-light">Contact Us</a>
         </div>
     </div>
 </div>
